@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div Tag</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #navbar {
+        background: wheat;
+        display: flex;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px;
+      }
+
+      ul {
+        display: flex;
+        gap: 20px;
+      }
+
+      li {
+        list-style: none;
+        font-size: 18px;
+        text-transform: capitalize;
+        cursor: pointer;
+        letter-spacing: 2px;
+        font-weight: bold;
+      }
+
+      #main {
+        height: 250px;
+        color: rgb(7, 7, 6);
+        background-color: rgb(139, 111, 75);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #section {
+        height: calc(70vh - 330px);
+        background: #b1c193;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .card {
+        border: 2px solid gray;
+        border-radius: 20px;
+        height: 200px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 9px 9px 9px gray;
+        padding: 10px;
+        background-color: rgb(219, 234, 197);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>My Logo</h2>
+      <ul>
+        <li>home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div id="main">
+      <br /><br /><br /><br />
+      <h1>MY web application</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+        odio!
+      </p>
+      <button
+        style="
+          background-color: rgb(108, 89, 39);
+          color: whitesmoke;
+          cursor: pointer;
+        "
+      >
+        shop now
+      </button>
+    </div>
+
+    <div id="section">
+      <div class="card">
+        <h3>i am card1</h3>
+      </div>
+
+      <div class="card">
+        <h3>i am card2</h3>
+      </div>
+
+      <div class="card">
+        <h3>i am card3</h3>
+      </div>
+    </div>
+  </body>
+</html>
