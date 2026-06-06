@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Students Form</h1>
+      <form action="">
+        <fieldset>
+          <legend>Student form</legend>
+          <label for="sname">Student Name</label>
+          <input
+            placeholder="Enter your name"
+            type="text"
+            name="stuName"
+            id="sName"
+          />
+          <br />
+          <br />
+          <label for="phNo">Phone Number</label>
+          <input
+            placeholder="Enter your Phone no."
+            type="tel"
+            name="phNo"
+            id="phNo"
+            minlength="10"
+            maxlength="10"
+          />
+          <br />
+          <br />
+          <label for="pass">Password</label>
+          <input
+            placeholder="Enter the Password"
+            type="password"
+            name="pass"
+            id="pass"
+            minlength="5"
+          />
+          <br />
+          <br />
+          <label for="age">Age</label>
+          <input placeholder="Enter your age" type="date" name="" id="age" />
+          <br />
+          <br />
+          <label for="email">Email</label>
+          <input
+            placeholder="Enter your email"
+            type="email"
+            name=""
+            id="email"
+          />
+          <br />
+          <br />
+          <label for="">Gender :</label>
+          <input type="radio" /><label for="">Male</label>
+          <input type="radio" /><label for="">Female</label> <br /><br />
+          <label for="">Course</label>
+          <input type="checkbox" name="" id="" /><label for="">SQL</label>
+          <input type="checkbox" name="" id="" /><label for="">Python</label>
+          <input type="checkbox" name="" id="" /><label for="">Webtech</label>
+          <input type="checkbox" name="" id="" /><label for="">Django</label
+          ><br /><br />
+          <label for="">Address</label>
+          <textarea name="" id=""></textarea><br /><br /><button>
+            Register
+          </button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
