@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      nav {
+        color: rgb(128, 95, 36);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: black;
+      }
+      nav ul {
+        display: flex;
+        gap: 10px;
+      }
+      li {
+        list-style: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        padding: 5px;
+      }
+      li:hover {
+        border: 1px solid gray;
+        border-radius: 30%;
+        background-color: gray;
+        padding: 5px;
+      }
+      main {
+        background-color: gray;
+        color: rgb(142, 88, 88);
+        /* color: beige; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+      }
+      main p {
+        text-align: center;
+      }
+      section {
+        display: flex;
+        /* border: 2px solid white; */
+        /* height: 40vh; */
+        background-color: rgb(152, 87, 87);
+        justify-content: center;
+      }
+      figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+        padding: 5px;
+        background-color: white;
+      }
+      article {
+        display: flex;
+        justify-content: space-between;
+      }
+      #left {
+        background-color: rgb(191, 140, 240);
+      }
+      #right {
+        background-color: burlywood;
+      }
+      aside {
+        margin: 1px;
+        padding: 3px;
+        height: 200px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>MyLogo</h1>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Welcome to Semantic tag tutorial</h2>
+      <p>
+        here we will get to know how to use semantic tag in html and what is the
+        meaning of these tags.
+      </p>
+    </main>
+    <section>
+      <figure>
+        <!-- <figcaption>LIon</figcaption> -->
+        <img src="SampleIMG1.jpg" alt="" height="200" />
+        <figcaption>Lion</figcaption>
+      </figure>
+    </section>
+    <article>
+      <aside id="left">
+        <h1>I am a Left side</h1>
+      </aside>
+      <aside id="right">
+        <h1>I am a right side</h1>
+      </aside>
+    </article>
+    <footer>
+      <details>
+        <summary>NB40 Batch</summary>
+        <p>jsdlkfjlaskdfjlaskdj</p>
+      </details>
+    </footer>
+  </body>
+</html>
