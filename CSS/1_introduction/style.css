@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  color: rgb(174, 72, 72);
+  font-weight: 900;
+  font-size: 30px;
+  text-transform: uppercase;
+}
