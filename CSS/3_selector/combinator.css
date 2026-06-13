@@ -70,3 +70,14 @@ li:hover {
   background-color: rgb(170, 124, 65);
   color: white;
 }
+
+#box5{
+  border: 2px solid gray;
+  margin: 20px;
+  padding: 10px;
+}
+
+#box6{
+  border: 2px solid gray;
+  margin: 10px;
+}
