@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: rgb(91, 90, 90);
+}
+
+.box1 {
+  padding: 10px;
+  background-color: rgb(152, 205, 251);
+  margin: 10px 10px;
+}
+
+#box2 {
+  margin: 10px 10px;
+  padding: 10px;
+  background-color: rgb(194, 223, 249);
+}
+.box3 {
+  margin: 10px 10px;
+  padding: 10px;
+  background-color: aliceblue;
+}
+
+/* Descendant Selector */
+
+.box1 * {
+  padding: 10px;
+}
+
+.box1 h2 {
+  padding-left: 60px;
+  font-weight: lighter;
+  color: black;
+}
+
+/* Direct Child Selector */
+.box1 > h2 {
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  padding: 10px;
+}
+li {
+  padding: 5px 10px;
+  border: 2px solid rgb(148, 22, 22);
+  border-radius: 10px;
+}
+li:hover {
+  filter: invert(1);
+  /* filter: brightness(1);
+  filter: grayscale(10px);
+  filter: hue-rotate(); */
+}
+.card > ul > #list4 {
+  background: rgb(164, 212, 253);
+}
+
+/* Adjacent Sibling */
+.card ul #item2 + li {
+  background-color: antiquewhite;
+}
+.card ul #item2 + li ~ li {
+  background-color: rgb(170, 124, 65);
+  color: white;
+}
