@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #navBar {
+        display: flex;
+        padding: 20px 0;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: uppercase;
+        background-color: black;
+        color: rgb(201, 201, 201);
+      }
+      ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+      #btnCont {
+        display: flex;
+        gap: 10px;
+      }
+      button {
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      li:hover {
+        color: red;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(229, 229, 229);
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navBar">
+      <h1>myLogo</h1>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      <div id="btnCont">
+        <button class="btn">login</button>
+        <button class="btn">signup</button>
+      </div>
+    </div>
+  </body>
+</html>
