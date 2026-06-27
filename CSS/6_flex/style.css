@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: blanchedalmond;
+}
+
+nav > ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
