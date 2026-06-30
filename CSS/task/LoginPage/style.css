@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(190, 196, 222);
+}
+.left {
+  flex-basis: 45%;
+}
+.right {
+  flex-basis: 55%;
+  background-color: rgb(40, 27, 29);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.login {
+  width: 400px;
+}
+.login > p {
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.login form {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  gap: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.login form button {
+  background-color: greenyellow;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  height: 35px;
+}
+
+.login .footer {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.login .footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.login form input {
+  height: 35px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
