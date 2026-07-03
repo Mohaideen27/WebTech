@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: rgb(31, 230, 5);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.row {
+  padding: 40px 40px;
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+}
+
+img {
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 2px rgb(75, 75, 75);
+  transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+  box-shadow: 10px 10px 15px rgb(75, 75, 75);
+  transform: scale(1.1);
+  translate: -10px -10px;
+}
+
+::-webkit-scrollbar {
+  scroll-behavior: auto;
+}
