@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  min-height: 100vh;
+  background: linear-gradient(red, black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gridContainer {
+  padding: 10px;
+  /* background-color: antiquewhite; */
+  display: grid;
+  height: 500px;
+  width: 600px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+.gridContainer > * {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: top;
+  transition: all 0.8s ease-in;
+}
+.gridContainer {
+  color: rgb(165, 189, 210);
+  text-shadow: 0px 0px 1px rgb(42, 116, 141);
+}
+.item1 {
+  grid-row: span 2;
+  background: url(mountain.avif);
+  background-size: cover;
+}
+.item2 {
+  background: url(sea.jpg);
+  background-size: cover;
+}
+.item3 {
+  background: url(garden.jpg);
+  background-size: cover;
+}
+
+.item4 {
+  grid-column: span 2;
+  background: url(mountain.jpg);
+  background-size: cover;
+}
+
+.item5 {
+  background: url(ocean.jpg);
+  background-size: cover;
+}
+.item6 {
+  background: url(summer.avif);
+  background-size: cover;
+}
+.item7 {
+  background: url(spring.jpg);
+  background-size: cover;
+}
+
+.gridContainer > *:hover {
+  background-position: bottom;
+}
