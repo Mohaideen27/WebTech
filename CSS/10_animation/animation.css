@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 600px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.circle {
+  /* border: 2px solid black; */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#c1 {
+  animation: jump 1.5s ease 0.3s alternate infinite;
+  background-color: red;
+}
+#c2 {
+  animation: jump 1.5s ease 0.6s alternate infinite;
+  background-color: blue;
+}
+#c3 {
+  animation: jump 1.5s ease 0.9s alternate infinite;
+  background-color: green;
+}
+#c4 {
+  animation: jump 1.5s ease 1.2s alternate infinite;
+  background-color: yellow;
+}
+#c5 {
+  animation: jump 1.5s ease 1.5s alternate infinite;
+  background-color: purple;
+}
+@keyframes jump {
+  from {
+    box-shadow: 7px 0px 7px;
+  }
+  to {
+    transform: translate(0, -100px);
+  }
+}
