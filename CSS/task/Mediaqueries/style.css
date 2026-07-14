@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#one {
+  display: grid;
+  grid-template-rows: repeat(3, 300px);
+  grid-template-columns: 40% 20% 40%;
+}
+#one > * {
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#one > * > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#one > * > div > h3 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+#art1 {
+  background: url(pic01.jpg);
+  grid-column: span 2;
+}
+#art1 > div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 0, 128, 0.656);
+}
+#art2 {
+  background: url(pic02.jpg);
+}
+#art3 {
+  background: url(pic03.jpg);
+}
+#art4 {
+  grid-column: span 2;
+  background: url(pic04.jpg);
+}
+#art5 {
+  grid-column: span 2;
+  background: url(pic05.jpg);
+}
+#art6 {
+  background: url(pic06.jpg);
+}
