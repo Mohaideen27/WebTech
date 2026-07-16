@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Task</title>
+    <style>
+      body {
+        background: linear-gradient(orange, yellow);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        background-color: white;
+        width: 60%;
+        height: 60%;
+        position: relative;
+      }
+      .circle {
+        /* border: 1px solid black; */
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #c1 {
+        position: absolute;
+        background-color: rgb(211, 100, 211);
+        top: -50px;
+        left: 50%;
+        transform: translate(-50px, 0);
+      }
+      #c2 {
+        position: absolute;
+        background-color: rgb(230, 123, 123);
+        left: -50px;
+        top: 50%;
+        transform: translate(0, -50px);
+      }
+      #c3 {
+        position: absolute;
+        background-color: greenyellow;
+        bottom: -50px;
+        left: 50%;
+        transform: translate(-50px, 0);
+      }
+      #c4 {
+        position: absolute;
+        background-color: aqua;
+        right: -50px;
+        top: 50%;
+        transform: translate(0, -50px);
+      }
+      #c5 {
+        position: absolute;
+        background-color: antiquewhite;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50px, -50px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle" id="c1">1</div>
+      <div class="circle" id="c2">2</div>
+      <div class="circle" id="c3">3</div>
+      <div class="circle" id="c4">4</div>
+      <div class="circle" id="c5">5</div>
+    </div>
+  </body>
+</html>
