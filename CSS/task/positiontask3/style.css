@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(to right, royalblue, white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 80%;
+  width: 80%;
+  background: linear-gradient(to right, yellow, red, blue);
+  display: flex;
+  position: relative;
+}
+.container > * {
+  position: absolute;
+  transition: all 0.3s ease-in;
+}
+.container > *:hover .details {
+  cursor: pointer;
+  background: linear-gradient(to right, white, transparent);
+}
+.container > *:hover {
+  z-index: 10;
+}
+
+.dhoni {
+  z-index: 3;
+  left: 20px;
+}
+.virat {
+  z-index: 2;
+  left: 150px;
+}
+.rohit {
+  z-index: 1;
+  left: 300px;
+}
+.ishan {
+  z-index: 0;
+  left: 450px;
+}
+img {
+  height: 500px;
+  width: 300px;
+  object-fit: cover;
+}
