@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  background-color: black;
+  color: white;
+  z-index: 2;
+}
+header {
+  margin-top: 100px;
+  height: 300px;
+  background-color: lightcoral;
+}
+
+article {
+  height: 300px;
+  background-color: lightgoldenrodyellow;
+}
+
+aside {
+  height: 300px;
+  background-color: lightsalmon;
+}
+
+main {
+  height: 300px;
+  background-color: lightpink;
+  margin-bottom: 100px;
+}
+section {
+  height: 300px;
+}
+.container {
+  height: 300px;
+  background-color: bisque;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 100px;
+  background-color: red;
+  color: white;
+}
+
+section > button {
+  padding: 20px;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 20px;
+  position: sticky;
+  top: 200px;
+  z-index: 0;
+}
