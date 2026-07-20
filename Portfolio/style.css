@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* CSS for navbar */
+
+nav {
+  /* padding: 20px; */
+  color: white;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+nav > h1 {
+  color: #f4d72f;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+nav > ul a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  font-size: 20px;
+  border: 1px solid black;
+}
+/* CSS for main */
+main {
+  min-height: 100vh;
+  /* background-color: antiquewhite; */
+  display: grid;
+  grid-template-columns: 55% 45%;
+  padding: 80px 10%;
+  background-color: #111;
+}
+main > .left {
+  background-color: #111;
+  color: white;
+}
+.left > h3 {
+  font-size: 40px;
+  font-style: italic;
+  letter-spacing: 1.4px;
+  margin-bottom: 15px;
+}
+
+.left > h1 {
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+.left > h2 {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+.left > p {
+  width: 70%;
+  font-size: 25px;
+  text-align: justify;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.left > button {
+  padding: 15px;
+  width: 30%;
+  border-radius: 15px;
+  background-color: #444;
+  color: white;
+  font-size: 19px;
+  letter-spacing: 1.4px;
+}
+main > .right {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
