@@ -90,3 +90,105 @@ main > .right {
   justify-content: center;
   align-items: center;
 }
+
+#about {
+  padding: 100px 10%;
+  background-color: #111;
+  color: white;
+}
+#about > h1 {
+  text-align: center;
+  font-size: 75px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+#about > p {
+  text-align: center;
+  font-size: 21px;
+  width: 70%;
+  margin: 15px auto;
+}
+
+#about > .card {
+  background-color: #222;
+  width: 80%;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 20px;
+  border-left: 5px solid #f4d72f;
+  transition: all 0.2s ease-in;
+}
+
+#about > .card:hover {
+  box-shadow: 0px 0px 8px #f4d72f;
+  transform: translateY(-5px);
+  /* border: none; */
+}
+
+.card > h2 {
+  font-size: 45px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.card > p {
+  font-size: 19px;
+  color: #ccc;
+}
+#projects {
+  padding: 100px 10%;
+  background-color: #111;
+  color: white;
+}
+#projects > h1 {
+  text-align: center;
+  font-size: 75px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+#projects > p {
+  text-align: center;
+  font-size: 21px;
+  width: 70%;
+  margin: 15px auto;
+}
+
+article {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 100px;
+}
+
+article > .card {
+  height: 450px;
+  width: 350px;
+  border-radius: 20px;
+  background-color: #333;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+
+.card > img {
+  height: 50%;
+  width: 100%;
+}
+
+article > .card > h3 {
+  color: #f4d72f;
+  text-transform: capitalize;
+  letter-spacing: 1.4px;
+  margin: 10px;
+}
+
+article > .card > p {
+  margin: 10px;
+}
+
+article > .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px #f4d72f;
+}
