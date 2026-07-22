@@ -39,6 +39,24 @@ nav > ul a {
   font-size: 20px;
   border: 1px solid black;
 }
+
+nav li {
+  position: relative;
+}
+
+nav li::after {
+  content: "";
+  height: 5px;
+  width: 0%;
+  background-color: white;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: all 1s ease-in;
+}
+nav li:hover::after {
+  width: 100%;
+}
 /* CSS for main */
 main {
   min-height: 100vh;
@@ -191,4 +209,23 @@ article > .card > p {
 article > .card:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 10px #f4d72f;
+}
+
+/* CONTACT CSS SECTION */
+#contact {
+  padding: 100px 10%;
+  background-color: #111;
+  color: white;
+}
+
+#contact > h1 {
+  text-align: center;
+  font-size: 75px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+#contact > p{
+  
 }
