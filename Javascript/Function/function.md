@@ -1,0 +1,53 @@
+# Function
+
+- function is one block of code performing some specific task.
+- function is used for code reusability, modulartiy, maintainability and readablility.
+
+## Named Function
+
+- function having name, is called `Named Function`.
+
+**_syntax_**
+
+```js
+function functionName() {
+  //code block
+}
+functionName();
+```
+
+**_Example_**
+
+```js
+function add() {
+  console.log(2 + 8);
+}
+add();
+```
+
+- for executing the function we should call the function by the function name.
+
+## Function with parameters
+
+**_syntax_**
+
+```js
+function add(a, b) {
+  console.log(a + b);
+}
+add(5, 2);
+add(15, 23);
+```
+
+## Function with return statement
+
+**_syntax_**
+
+```js
+function sub(a, b) {
+  return a - b;
+}
+let res = sub(40, 10);
+console.log(res);
+console.log(sub(100, 80));
+```
