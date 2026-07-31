@@ -51,3 +51,27 @@ let res = sub(40, 10);
 console.log(res);
 console.log(sub(100, 80));
 ```
+
+## Anonymous function
+
+Any function that does not have name is called anonymous function.
+
+**_syntax_**
+
+```js
+function(){
+
+}
+```
+
+- Here we cant execute the function because it doesnt have the name.
+
+## Function with Expression
+
+**_syntax_**
+
+```js
+variable = function () {
+  //code block
+};
+```
