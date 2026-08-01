@@ -51,22 +51,72 @@
 //     console.log("not prime number " + i);
 //   }
 // }
-function auto(num) {
-  let n = Math.pow(num, 2);
-  let m = 10;
-  let br = 0;
-  while (br == n) {
-    let d = 0;
-    d = n % m;
-    console.log(d);
+// function auto(num) {
+//   let n = Math.pow(num, 2);
+//   let m = 10;
+//   let br = 0;
+//   while (br == n) {
+//     let d = 0;
+//     d = n % m;
+//     console.log(d);
 
-    if (d == num) {
-      return "automorphic";
+//     if (d == num) {
+//       return "automorphic";
+//     }
+//     m = m * 10;
+//     br = d;
+//   }
+//   return "not automorphic";
+// }
+
+// console.log(auto(75));
+
+// // method 2
+// let isAutoMorphic = (num) => {
+//   let sq = num * num;
+//   while (num > 0) {
+//     let d = num % 10;
+//     let sq_d = sq % 10;
+//     if (num != sq_d) {
+//       return false;
+//     }
+//     num = Math.floor(num / 10);
+//     sq = Math.floor(sq / 10);
+//   }
+//   return true;
+// };
+
+// console.log(isAutoMorphic(625));
+
+// // ! Arrow function
+// let multiply = (a, b) => {
+//   console.log("I am multiply function");
+//   console.log(a * b);
+// };
+
+// // type 2
+// let division = (a, b) => a / b;
+// console.log(division(40, 5));
+
+let armstrong = (a) => {
+  let arm = a;
+  let count = (n) => {
+    let c = 0;
+    while (n > 0) {
+      c++;
+      n = Math.floor(n / 10);
     }
-    m = m * 10;
-    br = d;
+    return c;
+  };
+  let pow = count(a);
+  let sum = 0;
+  while (a > 0) {
+    let d = a % 10;
+    sum = sum + d ** pow;
+    a = Math.floor(a / 10);
   }
-  return "not automorphic";
-}
 
-console.log(auto(75));
+  return sum == arm;
+};
+
+console.log(armstrong(1634));

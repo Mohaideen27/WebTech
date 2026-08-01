@@ -75,3 +75,40 @@ variable = function () {
   //code block
 };
 ```
+
+## Arrow Function
+
+**_syntax_**
+
+```js
+variable = () => {
+  //code block
+};
+```
+
+**Example**
+
+```js
+let add = (a, b) => {
+  console.log("I am add function");
+  return a + b;
+};
+console.log(add(40, 5)); //45
+```
+
+**Note**
+
+- In Arrow function, if there is only one statement that time no need to use return keyword and {}.
+
+**_syntax_**
+
+```js
+variable=()=> // code block
+```
+
+**Example**
+
+```js
+let add = (a, b) => a + b;
+console.log(add(40, 5)); //45
+```
