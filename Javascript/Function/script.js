@@ -98,25 +98,65 @@
 // let division = (a, b) => a / b;
 // console.log(division(40, 5));
 
-let armstrong = (a) => {
-  let arm = a;
-  let count = (n) => {
-    let c = 0;
-    while (n > 0) {
-      c++;
-      n = Math.floor(n / 10);
-    }
-    return c;
-  };
-  let pow = count(a);
-  let sum = 0;
-  while (a > 0) {
-    let d = a % 10;
-    sum = sum + d ** pow;
-    a = Math.floor(a / 10);
-  }
+// let armstrong = (a) => {
+//   let arm = a;
+//   let count = (n) => {
+//     let c = 0;
+//     while (n > 0) {
+//       c++;
+//       n = Math.floor(n / 10);
+//     }
+//     return c;
+//   };
+//   let pow = count(a);
+//   let sum = 0;
+//   while (a > 0) {
+//     let d = a % 10;
+//     sum = sum + d ** pow;
+//     a = Math.floor(a / 10);
+//   }
 
-  return sum == arm;
+//   return sum == arm;
+// };
+
+// console.log(armstrong(1634));
+
+// let outer = () => {
+//   let a = 10;
+//   let inner = () => {
+//     let b = 10;
+//     console.log(a);
+//     console.log(b);
+//   };
+//   inner();
+//   console.log(b);
+// };
+// outer();
+
+// let greeting = (myFunc) => {
+//   myFunc();
+// };
+// greeting(() => {
+//   console.log("happy birthday");
+// });
+
+let add = (a, b) => {
+  console.log("addition is", a + b);
+};
+let sub = (a, b) => {
+  console.log("subtraction is", a - b);
+};
+let mul = (a, b) => {
+  console.log("multiplication is", a * b);
+};
+let div = (a, b) => {
+  console.log("division is", a / b);
 };
 
-console.log(armstrong(1634));
+let cal = (task, a, b) => {
+  task(a, b);
+};
+cal(add, 10, 20);
+cal(sub, 100, 20);
+cal(mul, 15, 20);
+cal(div, 10, 2);

@@ -112,3 +112,110 @@ variable=()=> // code block
 let add = (a, b) => a + b;
 console.log(add(40, 5)); //45
 ```
+
+## Nested Function
+
+- Creating one function inside another function is called as nested function.
+- function created inside the another function should be called inside that function only.
+
+**_Example_**
+
+```js
+let outer = () => {
+  console.log("I am outer function");
+  let inner = () => {
+    console.log("I am inner function");
+  };
+  inner();
+};
+outer();
+```
+
+## Lexical scoping
+
+- In nested function, inner function can access the properties of the outer function but outer function can not access the properties of the inner function is called `lexical Scoping`.
+
+**_Example_**
+
+```js
+let outer = () => {
+  let a = 10;
+  let inner = () => {
+    let b = 10;
+    console.log(a);
+    console.log(b);
+  };
+  inner();
+  console.log(b);
+};
+outer();
+```
+
+## Higher order function and callback function
+
+### Higher order function
+
+- Any functionn that takes any other function as a function as a argument is called as `higher order function`.
+
+### Callback function
+
+- The function we are sending as a argument to the higher order function is called as `callback function`.
+
+**_Example 1_**
+
+```js
+let wish = () => {
+  console.log("happy birthday");
+};
+let greeting = (myFunc) => {
+  myFunc();
+};
+greeting(wish);
+```
+
+**_Example 2_**
+
+```js
+let greeting = (myFunc) => {
+  myFunc();
+};
+greeting(() => {
+console.log("happy birthday"));
+};
+```
+
+**_Example 3_**
+
+```js
+let cal = (task, a, b) => {
+  task(a, b);
+};
+cal(
+  (a, b) => {
+    console.log("addition is", a + b);
+  },
+  10,
+  20,
+);
+cal(
+  (a, b) => {
+    console.log("subtraction is", a - b);
+  },
+  100,
+  20,
+);
+cal(
+  (a, b) => {
+    console.log("multiplication is", a * b);
+  },
+  15,
+  20,
+);
+cal(
+  (a, b) => {
+    console.log("division is", a / b);
+  },
+  10,
+  2,
+);
+```
