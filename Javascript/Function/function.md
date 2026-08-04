@@ -219,3 +219,87 @@ cal(
   2,
 );
 ```
+
+### Difference between var and let
+
+1. in `let` keyword re-declaration is not possible, but in `var` keyword re-declaration is possible.
+
+**_Example_**
+
+```js
+var a = 10;
+var a;
+let b = 90;
+let b; //X
+```
+
+2. `let` keyword having block scope but var keywork having **block scope, functional scope and global scope.**
+
+**_Example_**
+
+```js
+{
+  var x = 10;
+  let y = 20;
+  const z = 30;
+  console.log(x); //10
+  console.log(y); //20
+  console.log(z); //30
+}
+console.log(x); //10
+console.log(y); //X
+console.log(z); //X
+```
+
+**_Example using for loop_**
+
+```js
+function varScope() {
+  for (var i = 1; i <= 5; i++) {}
+  console.log(i); //6
+}
+varScope();
+function letScope() {
+  for (var i = 1; i <= 5; i++) {}
+  console.log(i); //X
+}
+letScope();
+```
+
+3. `variable hositing` is possible in **var** keyword but in **let** not possible.
+
+**What is Variable Hoisting?**
+
+- if we declared any variable by using `var` keyword and we access it before declaration.
+- the declaration will move to top and it will give the output as undefined. This process is called `variable hosting`.
+
+**_Example_**
+
+```js
+console.log(x); //defined
+var x;
+console.log(y); //defined
+var y = 20;
+```
+
+```md
+**IMPORTANT QUESTIONS**
+
+1. var vs let vs const
+2. undefined vs null
+3. how to know the datatype
+4. lexical scoping
+5. higher order and callback function
+```
+
+### Immediate Invoke Function Expression
+
+- This function executes only once.
+
+**_IIFE function with parameter example_**
+
+```js
+(function (port) {
+  console.log("server is running on port number", port);
+})(3000);
+```

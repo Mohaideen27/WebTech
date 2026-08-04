@@ -140,23 +140,37 @@
 //   console.log("happy birthday");
 // });
 
-let add = (a, b) => {
-  console.log("addition is", a + b);
-};
-let sub = (a, b) => {
-  console.log("subtraction is", a - b);
-};
-let mul = (a, b) => {
-  console.log("multiplication is", a * b);
-};
-let div = (a, b) => {
-  console.log("division is", a / b);
-};
+// let add = (a, b) => {
+//   console.log("addition is", a + b);
+// };
+// let sub = (a, b) => {
+//   console.log("subtraction is", a - b);
+// };
+// let mul = (a, b) => {
+//   console.log("multiplication is", a * b);
+// };
+// let div = (a, b) => {
+//   console.log("division is", a / b);
+// };
 
-let cal = (task, a, b) => {
-  task(a, b);
-};
-cal(add, 10, 20);
-cal(sub, 100, 20);
-cal(mul, 15, 20);
-cal(div, 10, 2);
+// let cal = (task, a, b) => {
+//   task(a, b);
+// };
+// cal(add, 10, 20);
+// cal(sub, 100, 20);
+// cal(mul, 15, 20);
+// cal(div, 10, 2);
+
+// function varScope() {
+//   for (var i = 1; i <= 5; i++) {}
+//   console.log(i);//6
+// }
+// varScope()
+// function letScope() {
+//   for (let i = 1; i <= 5; i++) {}
+//   console.log(i);//X
+// }
+// letScope()
+(function (port) {
+  console.log("server is running on port number", port);
+})(3000);
