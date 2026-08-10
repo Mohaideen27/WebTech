@@ -1,0 +1,166 @@
+//-- mock qustions --//
+
+1. var vs let vs const
+2. undifined vs null
+3. how to know the data type
+4. highterorder and callback function
+5. What is IIFe
+
+### IIFE( Immediate Invoke Function Expression )
+
+* iife function *
+
+* this function executes only once.
+
+*eg:*
+```js
+
+    (
+        function()
+        {
+            console.log("database connected")
+        }
+    )();
+```
+
+
+## string
+
+* string is sigle or collection of characters encloed with single quote/ double qupte / backticks.
+
+eg:
+```js
+    let str = "hi"
+let str = 'hi'
+let str = `hi
+hello
+how
+are 
+you`
+
+console.log(typeof str1)
+console.log(typeof str2)
+console.log(typeof str3)
+
+console.log(str3)
+
+`````
+
+**Note** : if we want to take multiline string then we can enclosed the string by suing backtick.
+
+### String Interpolation / Template Literals
+
+* accessing the variable  inside string is called template literals.
+* for this string should be enclosed with backtick and the variable we want to access should be written inside.
+
+eg:
+
+```js
+    let a = 10;
+    let b = 20;
+    let myName = "Naveen"
+
+    console.log(`my name is ${myName}`)
+```
+
+
+### string Methods.
+
+**Length Property**
+
+* its is used to know the length of any string.
+
+```js
+    let masseage =  "how are you"
+    consloe.log(massage.length)
+````
+
+### String Method
+
+**1 To Upper case()**
+
+* This method is used to convert the string into  uppercase and it wil returning one new string, it not change original string.
+
+``js
+    let str= "Hello"
+    let upper = str4.toUpperCase();
+    console.log(str4)
+
+    //! toLowerCase()
+
+    let str5 = "Hellow How Are You"
+    let lower = str5.toLowerCase();
+    console.log(str5)
+```
+
+
+**2. TO Lower Case()**
+
+* this methos is used to convert the  string into lowercase and it will return one new string.
+* it will not change the original string.
+
+**3. trim()**
+
+* This method is used to remove space form both the sides of the 
+
+eg:
+
+```js
+ let str6 = "  hi "
+ let str7 = str6.trim();
+
+ console.log(str6.length) //6
+ console.log(str7.length) //2
+```
+
+**4. index()**
+
+* it is used to know the index of the given character.
+* it will take the first occurance of the character.
+* if character is not present, it will return -1.
+
+eg:
+```js
+let str8 = "hello how are you"
+console.log(str8.indexOf(`o`)) //4
+console.log(str8.indexOf(`1`)) //2
+console.log(str8.indexOf(`2`)) //-1
+```
+
+**5. LastIndexOf()**
+
+* it will take the last occurance index of the character
+* if the character is not present, it will return -1.
+
+```js
+    console.log(str8.lastIndexOf(`0`)) 
+    console.log(str8.lastIndexOf(`1`)) 
+    console.log(str8.lastIndexOf(`2`)) 
+```
+
+**6. charAt()**
+
+* this method is used to know which charcter is present is present at the given index.
+
+```js
+    console.log(str8.charAt(1)) // e
+
+````
+
+**7. concat()**
+
+* this methode is used to combaine / merge two or more thtna two strings and it will return one new string.
+
+```js
+    console.log(str7.concat("",str8)) // 
+```
+
+**8. includes()**
+
+* IT IS USED TO KNOW THE GIVEN STRING IS PRESENT OR NOT.
+* IF IT IS PRESENT IT WIL RETURN TRUE OTHERWISE IT WILL RETURN FALSE.
+
+```js
+console.log(str8.includes("me")) //  false
+console.log(str8.includes("you")) //  true
+```
