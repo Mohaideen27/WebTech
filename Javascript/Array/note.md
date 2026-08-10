@@ -1,3 +1,108 @@
+# Array
+
+- Array is one linear datastructure where we can store multiple values in continous manner.
+- In javascript, we can store both homogenous and heterogeneous data inside array.
+- Array index start from 0.
+
+## How to decare Array?
+
+```js
+let a = [10, 30, "hello", true, [40, 50]];
+console.log(a);
+```
+
+## How to access Array elements
+
+```js
+let a = [10, 30, "hello", true, [40, 50]];
+console.log(a[2]); //2->index
+```
+
+## How to modify array element
+
+```js
+let a = [10, 30, "hello", true, [40, 50]];
+a[2] = 50;
+console.log(a); //[10, 30, 50, true, [40, 50]]
+```
+
+## How to traverse Array?
+
+- We can traverse array by using any looping statment like for, while, do while.
+- We can traverse by using `'for of' loop and 'for in ' loop`.
+
+**_for loop example_**
+
+```js
+for (let i = 0; i < a.length; i++) {
+  console.log(a[i]);
+}
+```
+
+**_for of loop example_**
+
+```js
+let a = [10, 30, "hello", true, [40, 50]];
+for (let j of a) {
+  console.log(j);
+}
+```
+
+**_for in loop example_**
+
+```js
+const user = {
+  name: "Alex",
+  age: 28,
+  role: "Developer",
+};
+
+// Loop through the keys of the object
+for (let key in user) {
+  console.log(`${key}: ${user[key]}`);
+}
+```
+
+# Array Methods
+
+## 1. push()
+
+- this method is used to add element at the end of the array.
+
+```js
+let a = [10, 20, 30];
+a.push(40);
+console.log(a);
+```
+
+## 2. pop()
+
+- This method is used to remove element from the end of the array.
+
+```js
+let a = [10, 20, 30, 40];
+a.pop();
+console.log(a); //[ 10, 20, 30 ]
+```
+
+## 3. shift()
+
+- This method is used to remove the element from first.
+
+```js
+a.shift();
+console.log(a); //[20,30]
+```
+
+## 4. unshift()
+
+- this method is used to add the element to first
+
+```js
+a.unshift(10);
+console.log(a); //[10,20,30]
+```
+
 ## 5. indexOf()
 
 - this method is used to know the first occurance index of any given element of the array.
