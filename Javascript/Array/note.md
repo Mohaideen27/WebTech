@@ -165,9 +165,79 @@ console.log(arr3);
 
 ## 1. map()
 
+- map() is one higher order array method used to traverse the array and we can perform some operation with all the array elements.
+
+- map() method will return one new array, it does not modify the original array.
+- this method takes 3 parameters.
+  - first parameter identify element.
+  - second parameter identify index.
+  - third parameter identify array.
+
+**_syntax_**
+
 ```js
-let arr = [10, 20, 30, 40];
-arr.map((ele, index) => {
-  console.log(ele, index);
+arrayName.map((ele, index, array) => {
+  //code block
+  //return value
 });
 ```
+
+**_Example_ 1**
+
+```js
+let arr = [20, 30, 40, 50, 60];
+arr.map((ele, index, array) => {
+  console.log(ele, index, array);
+});
+// 20 0 [ 20, 30, 40, 50, 60 ]
+// 30 1 [ 20, 30, 40, 50, 60 ]
+// 40 2 [ 20, 30, 40, 50, 60 ]
+// 50 3 [ 20, 30, 40, 50, 60 ]
+// 60 4 [ 20, 30, 40, 50, 60 ]
+```
+
+**_Example_ 2**
+
+```js
+let costPrice = [200, 364, 234, 982];
+let sellPrice = costPrice.map((ele) => {
+  return (ele * 120) / 100;
+});
+console.log(`costPrice ${costPrice}`);
+console.log(`sellPrice ${sellPrice}`
+// costPrice 200,364,234,982
+// sellPrice 240,436.8,280.8,1178.4
+```
+
+**_Example_ 3**
+
+```js
+let subjects = ["sql", "java", "node", "python"];
+let upperArr = subjects.map((ele) => {
+  return ele.toUpperCase();
+});
+console.log(subjects);
+console.log(upperArr);
+// [ 'sql', 'java', 'node', 'python' ]
+// [ 'SQL', 'JAVA', 'NODE', 'PYTHON' ]
+```
+
+## 2. filter()
+
+- filter() is one higherorder array method used to traverse the array and it check the condition.
+- it returns one new array, there the element will be stored which are matching with the condition.
+- filter() method also can take 3 parameters, (element, index, array)
+
+```js
+let marks = [56, 75, 59, 80, 65, 90, 45, 88, 70];
+let highest = marks.filter((ele) => {
+  return ele >= 70;
+});
+console.log(highest);
+```
+
+## 3. forEach()
+
+- this is also one higher order array method and it is used to traverse the array.
+- it can take 3 parameters(element, index, array)
+- the main difference b/w map() and forEach(), forEach method can't return any value.
