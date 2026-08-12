@@ -241,3 +241,68 @@ console.log(highest);
 - this is also one higher order array method and it is used to traverse the array.
 - it can take 3 parameters(element, index, array)
 - the main difference b/w map() and forEach(), forEach method can't return any value.
+
+```js
+let array = [10, 20, 30, 40];
+let sum = 0;
+array.forEach((element) => {
+  sum = sum + element;
+});
+console.log(sum);
+```
+
+## 4. reduce()
+
+- reduce() method is one higher order array method, it can take 4 parameter(accumulator, element, index, array).
+- it is used to make the array into single value.
+- by default accumulator value will be first element value.
+- when we want to add, multiply all the element we can use reduce method.
+
+**_Example 1_**
+
+```js
+let nums = [10, 20, 30, 40, 50];
+sum = nums.reduce((acc, ele) => {
+  return acc + ele;
+});
+console.log(sum);
+```
+
+**_Example 2_**
+
+```js
+let nums = [1, 2, 3, 4, 5];
+let mul = nums.reduce((acc, ele) => {
+  console.log("acc", acc);
+  return acc * ele;
+}, 1);
+console.log(mul);
+```
+
+## 5. sort()
+
+- sort() method is used to sort the array both in ascending and descending order.
+
+- this method will change the original array.
+
+- it can take 2 parameters.
+  - if we are return first - second parameter, it will give ascending order.
+  - if we are return second - first parameter, it will give descending order.
+
+**_Example 1_**
+
+```js
+// ascending order
+let sorted = [12, 2341, 223, 35, 343];
+sorted.sort((a, b) => {
+  return a - b;
+});
+console.log("ascending", sorted);
+
+// decsending order
+let sorted = [12, 2341, 223, 35, 343];
+sorted.sort((a, b) => {
+  return b - a;
+});
+console.log("descending", sorted);
+```

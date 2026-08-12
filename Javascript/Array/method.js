@@ -52,7 +52,31 @@
 //   }
 // });
 // console.log(greaterThan70);
-array = [10, 20, 30, 40];
-array.forEach((element) => {
-  console.log(element);
+// let nums = [1, 2, 3, 4, 5];
+// let array = [10, 20, 30, 40];
+// let sum = 0;
+// array.forEach((element) => {
+//   sum = sum + element;
+// });
+// console.log(sum);
+
+// let nums = [10, 20, 30, 40, 50];
+// sum = nums.reduce((acc, ele) => {
+//   return acc + ele;
+// });
+// console.log(sum);
+// let nums = [1, 2, 3, 4, 5];
+// let mul = nums.reduce((acc, ele) => {
+//   console.log("acc", acc);
+//   return acc + ele;
+// }, 0);
+let sorted = [12, 2341, 223, 35, 343];
+sorted.sort((a, b) => {
+  return a - b;
 });
+console.log("ascending", sorted);
+let sorted = [12, 2341, 223, 35, 343];
+sorted.sort((a, b) => {
+  return b - a;
+});
+console.log("descending", sorted);
