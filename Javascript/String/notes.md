@@ -168,7 +168,7 @@ console.log(greet.split()); // X wrong use of split
 ## 12. slice()
 
 - this method is used to extract some part of another string.
-- it takes two parameters(startIndex, enIndex), it does not include endIndex value.
+- it takes two parameters(startIndex, endIndex), it does not include endIndex value.
 - slice() can take negative indexing also.
 - endIndex value should be greater than startIndex.
 

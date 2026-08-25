@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      nav {
+        height: 80px;
+        background-color: aqua;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      nav > ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+
+      nav > li {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      main {
+        height: 300px;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 90px;
+      }
+
+      main > .card {
+        height: 180px;
+        width: 280px;
+        background-color: white;
+        padding: 20px;
+
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">DomLogo</h2>
+
+      <ul>
+        <li>about</li>
+        <li id="about">home</li>
+        <li>contect</li>
+      </ul>
+
+      <button>login</button>
+    </nav>
+
+    <section>
+      <h1>section tag used to DOM</h1>
+    </section>
+
+    <main>
+      <div class="card">
+        <h2>card1</h2>
+        <p id="para1">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+      </div>
+
+      <div class="card">
+        <h2>card2</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+      </div>
+
+      <div class="card"></div>
+    </main>
+    <script src="dom1.js"></script>
+  </body>
+</html>
