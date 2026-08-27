@@ -46,3 +46,132 @@ let para1 = document.getElementById("para1");
 let paras = document.getElementsByTagName("p");
 let secPara = paras[1];
 ```
+
+### document.getElementsByClassName()
+
+- this method is used to target the element based on classname.
+- it will return one HTML Collection.
+
+### document.querySelector()
+
+- In this method we can pass `id`, `class` and `tagname`.
+- it will target only the first element.
+- for applying id we have to give `#` and for applying class we have to give `.` for tagname name of the tag.
+
+### querySelectorAll()
+
+- By using this method we can target by the selectors(id/class/tag) and it will target all the elements.
+
+### How to apply CSS from js
+
+**_syntax_**
+
+```js
+element.style.cssproperty = "value";
+```
+
+```html
+<p>this is first para</p>
+<p>this is second para</p>
+```
+
+```js
+let firstPara = document.querySelector("p");
+firstPara.style.backgroundColor = "pink";
+firstPara.style.color = "green";
+```
+
+### innerText and innerHTML
+
+```html
+<div class="box1">
+  <h2>I am box1</h2>
+  <p>how are you</p>
+</div>
+<div class="box2">
+  <h2>I am box2</h2>
+</div>
+```
+
+**_innerText_**
+
+- it will give the content of any tags in text
+
+```js
+let box1 = document.querySelector(".box1");
+console.log(box1.innerText);
+// i am box1
+// how are you
+```
+
+**_innerHTML_**
+
+- it will give the content with tags.
+
+```js
+console.log(box1.innerHTML);
+// <h2>I am box1</h2>
+// <p>how are you</p>
+```
+
+### how to add and remove the class
+
+**_classList_**
+
+- by using this `classList` property we can get to know what are the classes are present in any element.
+
+**_classList.add()_**
+
+- it is used to add any new class in the element.
+
+**_classList.remove_**
+
+- it is used to remove any existing class from the element.
+
+```html
+<div class="card dark"></div>
+```
+
+```js
+let card = document.querySelector(".card");
+card.classList.remove("dark");
+card.classList.add("light");
+```
+
+### how to create any element from js
+
+**_document.createElement()_**
+
+- this method is used to create element.
+- then we can write content inside that, we can apply css.
+- but this element will not display on the UI.
+- for displaying we have 4 methods.
+
+**_append()_**: it helps to insert the element at the end.
+**_prepend()_**: it helps to insert the element at the starting.
+**_before()_**: it display the element before the targetted element.
+**_after()_**: it display the element after the targetted element.
+
+```html
+<ol>
+  <li>HTML</li>
+  <li>JAVASCRIPT</li>
+  <li>TYPESCIRPT</li>
+</ol>
+```
+
+```js
+let sub1 = document.createElement("li");
+sub1.innerText = "sql";
+let sub2 = document.createElement("li");
+sub3.innerText = "css";
+let sub3 = document.createElement("li");
+sub3.innerText = "python";
+let sub4 = document.createElement("li");
+sub4.innerText = "react";
+let ol = document.querySelector("ol");
+ol.append(sub1);
+ol.prepend(sub2);
+ol.after(sub3);
+ol.before(sub4);
+```

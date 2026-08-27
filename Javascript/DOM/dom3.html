@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card container</title>
+    <style>
+      .card {
+        margin: 20px 0px;
+        width: 200px;
+        height: 100px;
+        border: 2px solid gray;
+        /* align-items: center; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="">click here</button>
+    <div class="card"></div>
+    <button onclick="add()" onmouseover="mouse()" onmouseleave="out()">click here</button>
+    </button>
+    <div class="card" onclick="add()">
+      <h2>laptop</h2>
+      <p>price</p>
+   </div>
+    <button onclick="">click here</button>
+    <div class="card" onmousemove="move()" id="content">0</div>
+    <script src="dom3.js"></script>
+  </body>
+</html>
