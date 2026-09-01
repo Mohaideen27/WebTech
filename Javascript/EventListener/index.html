@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ol > li {
+        background-color: antiquewhite;
+        color: gray;
+        list-style: none;
+        margin-bottom: 5px;
+        width: 200px;
+        border-radius: 5px;
+        font-weight: bold;
+        padding: 10px;
+      }
+      article > input {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: capitalize;
+        font-family: cursive;
+      }
+      .box {
+        width: 40vw;
+        height: 20vh;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">click here</button>
+    <button>dont click here</button>
+    <ol>
+      <li>SQL</li>
+      <li>PYTHON</li>
+      <li>WEBTECH</li>
+      <li>DJANGO REST FRAMEWORK</li>
+    </ol>
+    <section>
+      <button onclick="f1()" onclick="f2()">button 3</button>
+      <button id="btn4">button 4</button>
+    </section>
+    <article>
+      <h2>Keyboard Event</h2>
+      <input type="text" placeholder="write something" />
+      <div class="box"></div>
+    </article>
+    <script>
+      let btn = document.getElementById("btn");
+      console.log(btn);
+      btn.addEventListener("click", (e) => {
+        console.log(e);
+        console.log(e.target);
+        console.log(e.type);
+        console.log("btn is clicked");
+      });
+      let li = document.querySelectorAll("li");
+      console.log(li);
+      li.forEach((li) => {
+        li.addEventListener("click", (e) => {
+          console.log(e.target.innerHTML);
+        });
+        console.log(li);
+      });
+      let f1 = () => {
+        console.log("function 1 execution started");
+      };
+      let f2 = () => {
+        console.log("function 2 execution started");
+      };
+      let btn4 = document.getElementById("btn4");
+      btn4.addEventListener("click", () => {
+        console.log("function 3 started execution");
+      });
+      btn4.addEventListener("click", () => {
+        console.log("function 4 started execution");
+      });
+      let input = document.querySelector("input");
+      console.log(input);
+      input.addEventListener("keydown", () => {
+        console.log("key is pressed");
+      });
+      let box = document.querySelector(".box");
+      input.addEventListener("keyup", (e) => {
+        console.log("key is up");
+        console.log(e.target.value);
+        box.innerText = e.target.value;
+      });
+    </script>
+  </body>
+</html>

@@ -175,3 +175,40 @@ ol.prepend(sub2);
 ol.after(sub3);
 ol.before(sub4);
 ```
+
+## Events in Javascript
+
+- any action we are performing on UI is called event.
+- we can handle the event by using `event handler` and `event listener`
+
+### Main types of events
+
+1. _mouse event_
+2. _keyboard event_
+3. _form event_
+4. _document event_
+
+### How to handle event by Event Handler
+
+```js
+let myInfo = () => {
+  console.log("my name is santanu, i am a fullstack developer");
+};
+```
+
+```html
+<button onclick="myInfo()">Get My Information</button>
+```
+
+### Can we write multiple event in same element ?
+
+- yes.
+
+**note**
+we can apply multiple event in the same element but the event should be different.
+
+```html
+<div onmouseover="fun1()" onmouseout="fun2()">
+  <h2>Applying multiple events</h2>
+</div>
+```
