@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      span {
+        /* background-color: gray; */
+        font-size: 25px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Password genarator</h1>
+    <form action="">
+      <div class="container">
+        <input id="otp" type="password" />
+        <span>💭</span>
+      </div>
+      <button onclick="generatePassoword()">Generate</button>
+      <button onclick="copy()">copy</button>
+    </form>
+    <script>
+      let form = document.querySelector("form");
+      let eye = document.querySelector("span");
+      let input = document.querySelector("input");
+      eye.addEventListener("click", () => {
+        console.log("clicked");
+        if (input.type == "password") {
+          input.type = "text";
+          eye.innerText = "😶‍🌫️";
+        } else {
+          input.type = "password";
+          eye.innerText = "💭";
+        }
+      });
+      let generatePassword = (e) => {
+        e.preventDefault();
+        let otp = document.getElementById("otp");
+        let caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let small = caps.toLocaleLowerCase();
+        let special = "!@#$%^&*";
+        let num = "0123456789";
+        let val =
+          caps[Math.floor(Math.random() * caps.length)] +
+          small[Math.floor(Math.random() * small.length)] +
+          special[Math.floor(Math.random() * special.length)] +
+          num[Math.floor(Math.random() * num.length)];
+        console.log(val);
+        otp.value = val;
+      };
+      let copy = () => {
+        input.select();
+        document.execCommand("copy");
+        console.log("copied");
+      };
+    </script>
+  </body>
+</html>
