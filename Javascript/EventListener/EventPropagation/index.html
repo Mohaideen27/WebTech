@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: gray;
+        /* border-radius: 20px; */
+      }
+      .outer {
+        height: 80%;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: skyblue;
+        border-radius: 20px;
+      }
+      .middle {
+        height: 80%;
+        width: 80%;
+        /* height: 100vh; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: yellow;
+        border-radius: 20px;
+      }
+      .inner {
+        height: 80%;
+        width: 80%;
+        /* height: 100vh; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: greenyellow;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="outer">
+        <div class="middle">
+          <div class="inner"></div>
+        </div>
+      </div>
+    </main>
+    <ol>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
+      <li>REACT</li>
+      <li>REST</li>
+    </ol>
+    <script>
+      let inner = document.querySelector(".inner");
+      let middle = document.querySelector(".middle");
+      let outer = document.querySelector(".outer");
+      inner.addEventListener(
+        "click",
+        (e) => {
+          // e.stopPropagation();
+          console.log("inner div is clicked");
+        },
+        true,
+      );
+      middle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        console.log("middle div is clicked");
+      });
+      outer.addEventListener("click", (e) => {
+        // e.stopPropagation();
+        console.log("outer div is clicked");
+      });
+      let ol = document.querySelector("ol");
+      ol.addEventListener("click", (e) => {
+        console.log(e.target.innerText);
+        inner.innerHTML = `<h1>${e.target.innerText}</h1>`;
+      });
+    </script>
+  </body>
+</html>
