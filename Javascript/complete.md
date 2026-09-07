@@ -1,13 +1,15 @@
 # DataType
 
 - it is used to know which kind of data we want to assign in the variable.
-- in javascript, we have 2 type of datatype. - Primitvie datatype - Non primitive datatype
+- in javascript, we have 2 type of datatype.
+  - Primitvie datatype
+  - Non primitive datatype
 
 ## Primitive Datatype:
 
 ### 1. Number datatype
 
-- in js both decimal and non decimal digits belongs to number datatype.
+- In js, both decimal and non decimal digits belongs to number datatype.
 - typeof undefined is `number`
 
 **note:**
@@ -24,7 +26,7 @@ console.log(typeof height); //number
 
 ### 2. String datatype
 
-- string is collection of single or multiple characters that is enclosed with single quote('') / double quotes("")/backtick(``)
+- String is collection of single or multiple characters that is enclosed with single quote('') / double quotes("")/backtick(``)
 - typeof undefined is `string`
 
 ```js
@@ -42,7 +44,7 @@ console.log(typeof s); //string
 
 ### 3. Boolean datatype
 
-- it can take only two values.(true/false)
+- It can take only two values.(true/false)
 - typeof undefined is `boolean`
 
 ```js
@@ -56,7 +58,7 @@ console.log(typeof hasChild); //boolean
 
 ### 4. Undefined datatype
 
-- any variable that is declared but not initialized is called as undefined.
+- Any variable that is declared but not initialized is called as undefined.
 
 - typeof undefined is `undefined`
 
@@ -68,7 +70,7 @@ console.log(typeof empNo); //undefined
 
 ### 5. null datatype
 
-- we can assign a variable with null as a value, then it is called as null datatype.
+- We can assign a variable with null as a value, then it is called as null datatype.
 
 - typeof null is `object`
 
@@ -80,7 +82,7 @@ console.log(typeof null);
 
 ### 6. BigInt datatype
 
-- if we want to take large number in js, we can take this bigint datatype.
+- If we want to take large number in js, we can take this bigint datatype.
 - for declaring bigint datatype, we have to use `n` as suffix.
 - typeof BigInt `BigInt`
 
