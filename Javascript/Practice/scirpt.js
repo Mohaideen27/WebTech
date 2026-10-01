@@ -72,3 +72,84 @@ const resetButton = document.getElementById("reset");
 const modal = document.getElementById("modal");
 const modalBody = document.getElementById("modalBody");
 const closeModal = document.getElementById("closeModal");
+
+// display Employees
+
+function displayEmployees(data) {
+  employeeList.innerHTML = "";
+  data.forEach((employee) => {
+    const employeeElement = document.createElement("div");
+    employeeElement.className = "employee";
+    employeeElement.innerHTML = `
+    <h3>${employee.name}</h3>
+    <p>${employee.age}</p>
+    <p>${employee.department}</p>
+    <p>${employee.skills.join(", ")}</p>
+    <p class="${employee.active ? "active" : "inactive"}">Status:${employee.active ? "Active" : "Inactive"}</p>
+    <button class="view-btn" data-id="${employee.id}">View</button>
+    <button class="delete-btn" data-id="${employee.id}">Delete</button>
+    `;
+
+    employeeList.appendChild(employeeElement);
+  });
+}
+
+// Search + Filter + Sort
+
+function renderEmployees() {
+  let result = [...employees];
+  const searchText = searchInput.value.toLowerCase().trim();
+  if (searchText) {
+    result = result.filter((employee) => {
+      return employee.name.toLowerCase().includes(searchText);
+    });
+  }
+  const department = departmentSelect.value;
+  if (department !== "all") {
+    result = result.filter((employee) => {
+      return employee.department === department;
+    });
+  }
+  const status = statusSelect.value;
+  if (status !== "all") {
+    result = result.filter((employee) => {
+      if (status === "active") {
+        return employee.active === true;
+      }
+      return employee.active === false;
+    });
+  }
+  const sortBy = sortSelect.value;
+  if (sortBy === "name") {
+    result.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sortBy === "age") {
+    result.sort((a, b) => a.age - b.age);
+  } else if (sortBy === "salary") {
+    result.sort((a, b) => a.salary - b.salary);
+  }
+  displayEmployees(result);
+}
+
+// Event Listeners
+
+searchInput.addEventListener("input", renderEmployees);
+departmentSelect.addEventListener("change", renderEmployees);
+statusSelect.addEventListener("change", renderEmployees);
+sortSelect.addEventListener("change", renderEmployees);
+
+// Event Delegation
+
+employeeList.addEventListener("click", (event) => {
+  const id = Number(event.target.dataset.id);
+  // Delete
+  if (event.target.classList.contains("delete-btn")) {
+    employees = employees.filter((employee) => employee.id !== id);
+  }
+  saveEmployees();
+  renderEmployees();
+  updateStats();
+
+  if (event.target.classList.contains("view-btn")) {
+    showEmployee(id);
+  }
+});
